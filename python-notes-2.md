@@ -157,4 +157,4 @@ print(myList[2:4])
 <br/>
 
 ## Sources
-[https://docs.python.org/3/tutorial/introduction.html](Python Docs tutorial - 3)
+[Python Docs tutorial - 3](https://docs.python.org/3/tutorial/introduction.html)

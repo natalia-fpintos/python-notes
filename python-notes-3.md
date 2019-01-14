@@ -134,6 +134,97 @@ The solution would be:
 if 1 > 2:
   pass
 ```
+<br/>
+
+## Defining functions
+
+We define new functions with the `def` keyword. If we wish to document our function, we can add a string literal 
+as the first statement of the function, this is known as a `docstring` or documentation string.
+
+```python
+def add_two_nums(a, b):
+  """This function adds two numbers (a and b) and prints the result of the adding operation."""
+  print(a + b)
+  
+add_two_nums(5, 4)
+9
+```
+<br/>
+
+## Functions and variable scope
+
+When a function is executed, a new `symbol table` is created for it, containing all variables local to the function.
+Therefore, all the variable assignments done inside the function will be saved in this table.
+
+When we reference a variable inside a function, Python will first look for a variable with such name in:
+  1. The `local symbol table` for the function
+  2. Then in any `local symbol tables` for enclosing functions
+  3. Then in the `global symbol table`
+  4. Finally, in the `table of built-in names` 
+
+For this reason, we cannot directly assign a value to a global variable inside a function (unless we name them in a 
+`global` statement):
+
+```python
+x = 1
+
+def change_x():
+  x = 7
+  print('local x is equal to {}'.format(x))
+
+change_x()
+print('global x is equal to {}'.format(x))
+
+local x is equal to 7
+global x is equal to 1
+```
+
+However, we can reference these global variables inside the function:
+
+```python
+x = 1
+
+def print_x():
+  print(x)
+
+print_x()
+1
+```
+
+Functions in Python can return a specific value with the `return` keyword. Othwerise, they will always return `None`:
+
+```python
+def add_two_nums(a, b):
+  return a + b
+ 
+def do_nothing():
+  pass
+  
+print(add_two_nums(1, 3))
+4
+
+print(do_nothing())
+None
+```
+<br/>
+
+## Function arguments
+
+The parameters of a function are added to the `local symbol table` for the function when it is called, these are passed by using __call by value__.
+
+We can define a default value for an argument, which will be used if the function is called without a value for that argument:
+
+```python
+def say(something='Hello World!'):
+  print(something)
+  
+say('Hey there!')
+Hey there!
+
+say()
+Hello World!
+```
+<br/>
 
 ## Sources
 [Python Docs tutorial - 4](https://docs.python.org/3/tutorial/controlflow.html)

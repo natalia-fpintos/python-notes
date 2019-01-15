@@ -1,4 +1,5 @@
-# Python notes 🐍 - Part 1
+# 🐍 Part 1: The Python Interpreter
+<br/>
 
 ## Extensibility
 
@@ -103,3 +104,5 @@ we need to declare this at the top of the file.
 ## Sources
 [Python Docs tutorial - 1](https://docs.python.org/3/tutorial/appetite.html)<br/>
 [Python Docs tutorial - 2](https://docs.python.org/3/tutorial/interpreter.html)
+
+[Continue with Part 2: Basic types and operations](https://github.com/alysanne/python_notes/blob/master/python-notes-2.md)

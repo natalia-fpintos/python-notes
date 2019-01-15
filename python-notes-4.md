@@ -1,9 +1,11 @@
-# Python notes 🐍 - Part 4
+# 🐍 Part 4: Functions
+<br/>
 
 ## Defining functions
 
 We define new functions with the `def` keyword. If we wish to document our function, we can add a string literal 
-as the first statement of the function, this is known as a `docstring` or documentation string.
+as the first statement of the function, this is known as a `docstring` or documentation string. We can access the 
+docstring calling `function_name.__doc__`:
 
 ```python
 def add_two_nums(a, b):
@@ -12,6 +14,9 @@ def add_two_nums(a, b):
   
 add_two_nums(5, 4)
 9
+
+print(add_two_nums.__doc__)
+This function adds two numbers (a and b) and prints the result of the adding operation.
 ```
 <br/>
 
@@ -167,5 +172,40 @@ Hello, World!
 ```
 <br/>
 
+## Lambda functions
+
+We can create small anonymous functions with the `lambda` keyword. These are restricted to a single expression.
+
+```python
+pairs = [(1, 'b'), (2, 'c'), (3, 'a')]
+
+# Sorting by the element in index 1
+pairs.sort(key=lambda pair: pair[1])
+
+[(3, 'a'), (1, 'b'), (2, 'c')]
+```
+<br/>
+
+## Function annotations
+
+It is possible to provide __annotations__ to a function, these specify an expression that can help document the function. 
+These are optional and don't have any effect. We can access annotations with `function_name.__annotations__`.
+
+Annotations can be provided for:
+  - An argument: with a colon and an expression right after the argument.
+  - The return value of a function: with an arrow `->` and an expression right before the colon that denotes the end of the
+  `def` statement.
+
+```python
+def add_two(x: 'an integer', y: 'another integer') -> int:
+  return x + y
+  
+print(add_two.__annotations__)
+{'x': 'an integer', 'y': 'another integer', 'return': <class 'int'>}
+```
+<br/>
+
 ## Sources
 [Python Docs tutorial - 4](https://docs.python.org/3/tutorial/controlflow.html)
+
+[Continue with Part 5: Data structures](https://github.com/alysanne/python_notes/blob/master/python-notes-5.md)

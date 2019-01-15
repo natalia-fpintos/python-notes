@@ -1,4 +1,5 @@
-# Python notes 🐍 - Part 3
+# 🐍 Part 3: Control flow tools
+<br/>
 
 ## If / elif / else
 
@@ -138,3 +139,5 @@ if 1 > 2:
 
 ## Sources
 [Python Docs tutorial - 4](https://docs.python.org/3/tutorial/controlflow.html)
+
+[Continue with Part 4: Functions](https://github.com/alysanne/python_notes/blob/master/python-notes-4.md)

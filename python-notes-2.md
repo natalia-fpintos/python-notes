@@ -1,4 +1,5 @@
-# Python notes 🐍 - Part 2
+# 🐍 Part 2: Basic types and operations
+<br/>
 
 ## Basic operations
 
@@ -158,3 +159,5 @@ print(myList[2:4])
 
 ## Sources
 [Python Docs tutorial - 3](https://docs.python.org/3/tutorial/introduction.html)
+
+[Continue with Part 3: Control flow tools](https://github.com/alysanne/python_notes/blob/master/python-notes-3.md)

@@ -38,6 +38,6 @@ elements) without modifying the original list.
 Lists can be used as stacks or queues:
 
 * __Stacks:__ using a list as a stack (last in, first out) can be very convenient using the methods `append` and `pop`.
-* __Queues__ using lists as queues (first in, first out), however, is not so convenient, as appending or popping elements 
+* __Queues:__ using lists as queues (first in, first out), however, is not so convenient, as appending or popping elements 
 at the beginning of a list means shifting all the other elements in the list as well. It's better to implement queues with 
 `collections.deque` instead, which provide fast inserts and pops from the beginning or end.
